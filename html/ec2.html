@@ -1,0 +1,40 @@
+<!Doctype html>
+<html>
+<head>
+	<title>EC2 SERVICES</title>
+	<style>
+		abc{
+			color:"blue";
+		}
+	</style>
+</head>
+<body style="background-color:powderblue">
+<h1 style="color:red;">Welcome to the world of CLOUD COMPUTING</h1>
+<form action="/cgi-bin/ec2.py" method="POST">
+ <fieldset>
+  <legend>EC2 Credentials</legend>
+  SECURITY GROUP:<br>
+  <input name="sg" type="text" placeholder="Eg. mysec-sg">
+  <br>
+  Type of OS:<br>
+  <!-- limit it to our options -->
+  <select name="os">
+    <option value="a">REDHAT 7</option>
+    <option value="b">UBUNTU v14.02</option>
+    <option value="c">WINDOWS 16 SERVER</option>
+  </select>
+  <br>
+   No of Instances:<br>
+  <input name="cnt" type="number" >
+  <br>
+  <br>
+  <br>
+  
+  <p> WE PROVIDE <mark class="abc">SSH</mark> BY DEFAULT FOR <mark class="abc">LINUX</mark> INSTANCES AND <mark class="abc">RDP</mark> FOR <mark class="abc">WINDOWS</mark> INSTANCES</p>
+
+  <input type="submit" value="Submit">
+  <input type="reset">
+ <fieldset>
+</form> 
+</body>
+</html>

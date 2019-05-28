@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>ZENITH CLOUD DEVELOPERS</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- Custom styles for this template -->
+    <!--link href="jumbotron.css" rel="stylesheet"-->
+	<style>
+		.dropbtn {
+			background-color:white:
+   			 color: black;
+   			 padding: 10px;
+   			 font-size: 16px;
+   			 border: none;
+    		cursor: pointer;
+		}
+
+		.dropdown {
+			position: absolute;
+   			 display: block;
+		}
+
+		.dropdown-content {
+    		display: none;
+    		position: absolute;
+		 	min-width: 160px;
+			box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    		z-index: 1;
+		}
+
+		.dropdown-content a {
+		 	color: black;
+		 	padding: 8px 8px;
+			text-decoration: none;
+    		display: block;
+		}
+
+		.dropdown-content a:hover {background-color: #f1f1f1}
+
+		.dropdown:hover .dropdown-content {
+    		display: block;
+		}
+		.dropdown-submenu {
+    	position: relative;
+		}
+
+		.dropdown-submenu .dropdown-menu {
+    	top: 0;
+    	left: 100%;
+    	margin-top: -1px;
+		}
+	</style>
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#" style="color:#F1F1F6;">CLOUD SERVICES</a>
+        </div>
+      </div>
+    </nav>
+    <div class="jumbotron">
+      <div class="container">
+        <h1 style="color:#5F5F5F;">Hello !!!</h1>
+        <p>Welcome to <strong style="color:#5F5F5F;">CLOUD SERVICES</strong> . You are free to choose any of our services listed below and we guarantee you very good perforamnce in exchange of a paltry amount. These cloud services also conatin Amazon Cloud Services. </p>
+        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h2 style="color:blue;">SAAS <small> SOFTWARE AS A SERVICE</small> </h2>
+          <p>Need softwares, no need to fret over because we have got your back. Now u can use softwares such as FIREFOX, GEDIT ,CHEESE through our service SAAS</p>
+          <p><a class="btn btn-default" href="saas.html" role="button">View details &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+          <h2 style="color:blue;">STAAS <small> STORAGE AS A SERVICE</small></h2>
+          <p>Thinking of a service that wont let u feel you are running out of space. Here we are at your door with our STAAS service</p>
+          <p><a class="btn btn-default" href="staas.html" role="button">View details &raquo;</a></p>
+       </div>
+        <div class="col-md-4">
+          <h2 style="color:blue;">PAAS <small> PLATFORM AS A SERVICE</small></h2>
+          <p>Enjoy our docker conatiner services for interpreters of languages such as Python, Ruby, Java, Perl...!! </p>
+          <p><a class="btn btn-default" href="docker.html" role="button">View details &raquo;</a></p>
+        </div>
+      </div>
+	 <div class="row">
+        <div class="col-md-4">
+          <h2 style="color:blue;">AMAZON WEB SERVICES</h2>
+          <p> We have integrated the power of AWS in our CLOUD STORAGE.</p>
+          <p><a class="btn btn-default" href="awsopt.html" role="button">View details &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+          	<h2 style="color:blue;">IAAS <small> INFRASTRUCTURE AS A SERVICE </small></h2>
+          	<p>We provide you with OS such as RedHat nad Ubuntu</p>
+						<div class="dropdown">
+    				<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Services
+    				<span class="caret"></span></button>
+    				<ul class="dropdown-menu">
+      				<li class="dropdown-submenu">
+        			<a class="test" tabindex="-1" href="#">Installed OS <span class="caret"></span></a>
+        				<ul class="dropdown-menu">
+          				<li><a tabindex="-1" href="./iaas/liverhel.html">REDHAT</a></li>
+          				<li><a tabindex="-1" href="./iaas/insrhel.html">UBUNTU</a></li>
+		   					</ul>
+			  			</li>
+							<li class="dropdown-submenu">
+        			<a class="test" tabindex="-1" href="#">Live OS <span class="caret"></span></a>
+        				<ul class="dropdown-menu">
+          				<li><a tabindex="-1" href="./iaas/livecent.html">REDHAT</a></li>
+          				<li><a tabindex="-1" href="./iaas/liverhel.html">UBUNTU</a></li>
+       					</ul>
+    					</ul>
+  					</div>
+				</div>
+		</div>
+	</div>
+	<script>
+		$(document).ready(function(){
+  		$('.dropdown-submenu a.test').on("click", function(e){
+    		$(this).next('ul').toggle();
+  			e.stopPropagation();
+  			e.preventDefault();
+			});
+		});
+</script>
+
+  </body>
+</html>
+

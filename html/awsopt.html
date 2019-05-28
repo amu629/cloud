@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>AMAZON CLOUD SAMPLE</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <!--link href="jumbotron.css" rel="stylesheet"-->
+    <style>
+	.dropbtn {
+    	background-color: #4CAF50;
+    	color: white;
+    	padding: 8px;
+    	font-size: 16px;
+    	border: none;
+    	cursor: pointer;
+	}
+
+	.dropbtn:hover, .dropbtn:focus {
+    	background-color: #3e8e41;
+	}
+
+	.dropdown {
+		 position: relative;
+   		 display: inline-block;
+	}
+
+	.dropdown-content {
+    	display: none;
+   		position: absolute;
+		background-color: #f9f9f9;
+   		min-width: 160px;
+   		overflow: auto;
+		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    	z-index: 1;
+	}
+
+	.dropdown-content a {
+   		color: black;
+    	padding: 8px 12px;
+    	text-decoration: none;
+   		display: block;
+	}
+
+	.dropdown a:hover {background-color: #f1f1f1}
+
+	.show {display:block;}
+	</style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      	<div class="container">
+        <div class="navbar-header">
+          	<a class="navbar-brand" href="https://aws.amazon.com/" style="color:#F1F1F6;">AMAZON CLOUD SERVICES</a>
+        </div>
+      	</div>
+    </nav>
+    	<div class="jumbotron">
+      		<div class="container">
+        		<h1 style="color:#5F5F5F;">Hello !!!</h1>
+        		<p>Welcome to <strong style="color:#5F5F5F;">AWS</strong> . Our AWS contains EC2 CONTAINER SERVICES , EBS, ELB SERVICES AND S3 SERVICES.</p>
+				<p> YOU CAN CHOOSE FROM THESE SERVICES ACCORDING TO YOUR REQUIREMENT</p>
+    			<p><a class="btn btn-primary btn-lg" href="https://aws.amazon.com/" role="button">Learn more &raquo;</a></p>
+      		</div>
+    	</div>
+    <div class="container">
+  	<div class="row">
+        <div class="col-md-4">
+          	<h2 style="color:blue;">EC2<small> ELASTIC CONTAINER SERVICES</small> </h2>
+          	<p>AN OPERATING SYSTEM IN YOUR HAND WITH AS MANY INSTANCES AS YOU WANT TO</p>
+          	<div class="dropdown">
+				<button onclick="myFunctionec2()" class="dropbtn">Services</button>
+  				<div id="myDropdownec2" class="dropdown-content">
+    				<a href="./aws/ec2.html">Launch New Instance</a>
+    				<a href="./aws/ec2b.html">Backup of Instance</a>
+    				<a href="./aws/ec2bl.html">Launch Backup</a>
+  				</div>
+			</div>
+        </div>
+	<div class="col-md-4">
+          	<h2 style="color:blue;">S3 SERVICES</h2>
+          	<p> S3 SERVICES ARE OBJECT STORAGE SERVICES PROVIDED BY AWS MIXED WITH THE POWER OF FILE STORAGE SERVICES</p>
+			<div class="dropdown">
+				<button onclick="myFunctions3()" class="dropbtn">Services</button>
+  				<div id="myDropdowns3" class="dropdown-content">
+    				<a href="./aws/s3mrb.html">Make/Remove/View Bucket</a>
+				<a href="./aws/s3add.html">Add to Bucket</a>
+				<a href="./aws/s3web.html">Static Web Hosting</a>
+  				</div>
+			</div>
+        </div>
+	<div class="col-md-4">
+      		<h2 style="color:blue;">IAM<small>IDENTITY AND ACCESS MANANGEMENT CONSOLE</small></h2>
+          	<p>IT PROVIDES CONFIDENTIALITY AND APPROPRIATE ACCESS TO THE RIGHT USER</p>
+			<div class="dropdown">
+				<button onclick="myFunctioniam()" class="dropbtn">Services</button>
+  				<div id="myDropdowniam" class="dropdown-content">
+    				<a href="./aws/iamu.html">IAM USER</a>
+    				<a href="./aws/iamr.html">IAM ROLE</a>
+  				</div>
+			</div>
+    	</div>
+        
+	
+    </div>
+    <div class="row">
+	<div class="col-md-4">
+          	<h2 style="color:blue;">EBS <small> ELASTIC BLOCK STORAGE SERVICES</small></h2>
+          	<p>ELASTIC BLOCK STORAGE SERVICES SO THAT YOU NEVER RUN OUT OF SPACE</p>
+			<div class="dropdown">
+				<button onclick="myFunctionebs()" class="dropbtn">Services</button>
+  				<div id="myDropdownebs" class="dropdown-content">
+    				<a href="./aws/ebs.html">Launch Volume</a>
+    				<a href="./aws/ebsb.html"> Backup Volume</a>
+    				<a href="./aws/ebsbl.html">Launch Backup</a>
+  				</div>
+			</div>
+       	</div>
+       	<div class="col-md-4">
+      		<h2 style="color:blue;">ELB<small>ELASTIC LOAD BALANCER SERVICES</small></h2>
+          	<p>AN ELASTIC LOAD BALANCING TO KEEP THE DOWN TIME OF YOUR APACHE AS LOW AS YOU WANT TO</p>
+			<div class="dropdown">
+				<button onclick="myFunctionelb()" class="dropbtn">Services</button>
+  				<div id="myDropdownelb" class="dropdown-content">
+    				<a href="#home">Home</a>
+    				<a href="./aws/elbr.html">ELB Register</a>
+    				<a href="./aws/elbdr.html">ELB Deregister</a>
+  				</div>
+			</div>
+    	</div>
+    	
+    </div> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+<script src="../../dist/js/bootstrap.min.js"></script>
+<script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+<script>
+	/* When the user clicks on the button toggle between hiding and showing the dropdown content */
+	function myFunctionec2() {
+    	document.getElementById("myDropdownec2").classList.toggle("show");
+	}
+
+	// Close the dropdown if the user clicks outside of it
+	window.onclick = function(event) {
+  		if (!event.target.matches('.dropbtn')) {
+			var dropdowns = document.getElementsByClassName("dropdown-content");
+    		var i;
+    		for (i = 0; i < dropdowns.length; i++) {
+     			 var openDropdown = dropdowns[i];
+      			if (openDropdown.classList.contains('show')) {
+    				openDropdown.classList.remove('show');
+      			}
+    		}
+  		}
+	}
+</script>
+<script>
+	/* When the user clicks on the button toggle between hiding and showing the dropdown content */
+	function myFunctionebs() {
+    	document.getElementById("myDropdownebs").classList.toggle("show");
+	}
+
+	// Close the dropdown if the user clicks outside of it
+	window.onclick = function(event) {
+  		if (!event.target.matches('.dropbtn')) {
+			var dropdowns = document.getElementsByClassName("dropdown-content");
+    		var i;
+    		for (i = 0; i < dropdowns.length; i++) {
+     			 var openDropdown = dropdowns[i];
+      			if (openDropdown.classList.contains('show')) {
+    				openDropdown.classList.remove('show');
+      			}
+    		}
+  		}
+	}
+</script>
+<script>
+	/* When the user clicks on the button toggle between hiding and showing the dropdown content */
+	function myFunctioniam() {
+    	document.getElementById("myDropdowniam").classList.toggle("show");
+	}
+
+	// Close the dropdown if the user clicks outside of it
+	window.onclick = function(event) {
+  		if (!event.target.matches('.dropbtn')) {
+			var dropdowns = document.getElementsByClassName("dropdown-content");
+    		var i;
+    		for (i = 0; i < dropdowns.length; i++) {
+     			 var openDropdown = dropdowns[i];
+      			if (openDropdown.classList.contains('show')) {
+    				openDropdown.classList.remove('show');
+      			}
+    		}
+  		}
+	}
+</script>
+<script>
+	/* When the user clicks on the button toggle between hiding and showing the dropdown content */
+	function myFunctionelb() {
+    	document.getElementById("myDropdownelb").classList.toggle("show");
+	}
+
+	// Close the dropdown if the user clicks outside of it
+	window.onclick = function(event) {
+  		if (!event.target.matches('.dropbtn')) {
+			var dropdowns = document.getElementsByClassName("dropdown-content");
+    		var i;
+    		for (i = 0; i < dropdowns.length; i++) {
+     			 var openDropdown = dropdowns[i];
+      			if (openDropdown.classList.contains('show')) {
+    				openDropdown.classList.remove('show');
+      			}
+    		}
+  		}
+	}
+</script>
+<script>
+	/* When the user clicks on the button toggle between hiding and showing the dropdown content */
+	function myFunctions3() {
+    	document.getElementById("myDropdowns3").classList.toggle("show");
+	}
+
+	// Close the dropdown if the user clicks outside of it
+	window.onclick = function(event) {
+  		if (!event.target.matches('.dropbtn')) {
+			var dropdowns = document.getElementsByClassName("dropdown-content");
+    		var i;
+    		for (i = 0; i < dropdowns.length; i++) {
+     			 var openDropdown = dropdowns[i];
+      			if (openDropdown.classList.contains('show')) {
+    				openDropdown.classList.remove('show');
+      			}
+    		}
+  		}
+	}
+</script>
+</body>
+</html>
+

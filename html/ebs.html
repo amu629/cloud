@@ -1,0 +1,22 @@
+<!Doctype html>
+<html>
+<head>
+	<title>EBS SERVICES</title>
+</head>
+<body style="background-color:powderblue">
+<form action="/cgi-bin/ebs.py" method="POST">
+ <fieldset>
+  <legend>EBS Credentials</legend>
+  Enter the Instance-Id u wish to mount the volume to:<br>
+  <input name="iid" type="text" placeholder="Eg. i-abcdefhvk233ry">
+  <br>
+   Size of EBS Storage:<br>
+  <input name="sz" type="number" >
+  <br>
+  <br>
+  <input type="submit" value="Submit">
+  <input type="reset">
+ <fieldset>
+</form> 
+</body>
+</html>

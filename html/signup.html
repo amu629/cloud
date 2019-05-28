@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Page</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="static/sty.css">
+	<link rel="stylesheet" type="text/css" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> 
+<body>
+	<h1 id="hh"> Cloud Computing Services SignUp Portal</h1>
+	<div id='container'>
+		<form id ='frm' action="/cgi-bin/signup.py" method="POST" onSubmit="return func()">
+  			<h2> Sign Up:</h2>
+			First Name:<br>
+  			<input name="fname" type="text" required>
+			<br>
+			Last Name:<br>
+  			<input name="lname" type="text" required>
+			<br>
+			Contact No.:<br>
+  			<input name="cno" type="text" required>
+			<br>
+  			Username:<br>
+  			<input name="uname" type="text" required>
+			<br>
+  			Password:<br>
+  			<input id="passd" name="passd" type="password" required><span><i id="a" class='fa fa-eye'></i></span>
+  			<br>
+			Retype Password:<br>
+  			<input id="passwd" name="passwd" type="password" required><span><i id="b" class='fa fa-eye'></i></span>
+			<p id="yo"></p>
+			<br>
+  			<input type="submit" value="Submit">
+  			<input type="reset">
+			<br>
+		</form>
+	</div> 				
+</body>
+<script>
+	function func(){
+		var pp = document.getElementById('passd').value;
+		var pc = document.getElementById('passwd').value;
+		var txt="Sorry..!! Passwords do not match"
+		if(pp!=pc) {
+			document.getElementById('yo').innerHTML = txt;
+			return false; 
+		}
+		return true;
+	}
+</script>
+<script>
+	function show()
+	{
+	var p = document.getElementById('passd');
+	p.setAttribute('type','text');  
+	}
+
+	function hide()
+	{
+	var p = document.getElementById('passd');
+	p.setAttribute('type','password');   
+	}
+	var pwShown = 0;
+	document.getElementById("a").addEventListener("click", function() {
+    if (pwShown == 0) 
+    {
+        pwShown = 1; 
+        show();
+    } 
+    else {
+        pwShown = 0;
+        hide();
+    }
+            }, false);
+</script>
+<script>
+	function show1()
+	{
+	var pp = document.getElementById('passwd');
+	pp.setAttribute('type','text');  
+	}
+
+	function hide1()
+	{
+	var pp = document.getElementById('passwd');
+	pp.setAttribute('type','password');   
+	}
+	var pwShown1 = 0;
+	document.getElementById("b").addEventListener("click", function() {
+    if (pwShown1 == 0) 
+    {
+        pwShown1 = 1; 
+        show1();
+    } 
+    else {
+        pwShown1 = 0;
+        hide1();
+    }
+            }, false);
+</script>
+</html>

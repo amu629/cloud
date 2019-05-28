@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Page</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="static/sty.css">
+	<link rel="stylesheet" type="text/css" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> 
+</head>
+<body>
+	<h1 id="hh"> Cloud Computing Services Login Portal</h1>
+	<div id='container'>
+		<form id ='frm' action="/cgi-bin/check.py" method="POST">
+  			<h2> Log In:</h2>
+  			Username:<br>
+  			<input name="username" type="text" required>
+			<br>
+  			Password:<br>
+  			<input name="password" type="password" required>
+  			<br><br>
+  			<input type="submit" value="Submit">
+  			<input type="reset">
+		</form>
+		<p id="pp"> New to Cloud Service..!!  You can <a href="signup.html">Sign Up </a></p>
+	</div> 
+</body>
+</html>
